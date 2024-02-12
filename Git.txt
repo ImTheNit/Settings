@@ -1,0 +1,76 @@
+DEBUT DE TRAVAIL:
+	git pull // pour mettre a jour le repertoire en local 
+	
+
+POUR L'UPLOAD:
+	git add NOMFICHIER
+	git commit
+	git pull
+	git push
+
+
+===================Paramétrage supplémentaire==========================
+
+Des configurations supplémentaires peuvent être requises en fonction de l'environnement de travail.
+
+-----------------------------------UNIX-----------------------------------
+
+L'outil git est par défault installé sur les systèmes de types linux et unix.
+
+Pour les machines de l'écoles, afin de pouvoir utiliser l'ensemble des commandes git en se placant sur le disque H: qui est la partition partagée entre les deux OS,
+un problème de droit apparait. Pour résoudre ce problème on utilisera la commande "sudo" qui nous placera en mode administrateur sur la machine.
+Pour ne pas avoir à répéter cette opération à chaque ligne de commande on pourra utiliser un alias qu'on placera dans le fichier bashrc.
+
+----------------------------------WINDOWS---------------------------------
+
+L'outils git n'est pas présent sur les machines Windows il vous faudra donc l'installer à partir du lien suivant :
+
+    -Télécharger git(https://git-scm.com/download/win)
+
+Pour plus de détails voir le fichier VsCode détaillant l'installation sur cet IDE.
+
+-----------terminal windows--------------
+
+Configuration du git sur un terminal sous windows:
+
+-Télécharger git(https://git-scm.com/download/win)
+
+-Dans le menu Démarrer ou la recherche dans la barre des tâches, recherchez «variable d'environnement».
+
+-Sélectionnez "Modifier les variables d'environnement système"
+
+-Cliquez sur le bouton "Variables d'environnement" en bas.
+
+-Double-cliquez sur l'entrée "Chemin"(path en anglais) sous "Variables système".
+
+-Avec le bouton "Nouveau" dans l'éditeur PATH, ajoutez C:\Program Files\Git\bin\et C:\Program Files\Git\cmd\à la fin de la liste. 
+	-Il faut utiliser les répertoires propre à votre installation
+
+====================Utilisation===============================
+
+
+Pour synchroniser votre répertoire courant avec utiliser la commande git clone:
+    git clone URL_du_REPOSITORY_github
+        (Ex: git clone https://github.com/ImTheNit/Settings)
+    
+
+    -----identification-----
+
+    Pour pouvoir utiliser les fonctions de commits et de push, il faudra s'identifier lors de la première installation:
+        # git clone URL
+        git config credential.helper store # pour enregistrer vos identifiants et ne pas avoir à se reconnecter à chaque fois
+        git push
+        
+        il vous sera ensuite demandé de saisir votre identifiant/email 
+        Pour ce qui est du mot de passe, vous devrez utilisez un token en le générant de la facon suivante:
+        # Un token est lié a votre compte et peut vous servir pour plusieurs repository tant que la date de validité de celui ci est valide
+
+        Sur github:
+            seetings->developpers Settings-> Personnal Access tokens-> tokens
+            #Attention, une fois que le token sera révélé, il ne sera plus possible de le retrouver, assurez vous de le conserver #quelque part
+
+        Pour pouvez donc vous identifiez via votre terminal et utilisez la fonction push
+
+
+
+
